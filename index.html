@@ -4,7 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Personal Portfolio Website Design | Codehal</title>
+    <title>Portfolio | Nishanth Chaganty</title>
+
+
+
+    <script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/MMihyW5jtbIEfygU/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+  }
+	</script>
+
 
     <!-- box icons -->
     <link
@@ -27,6 +50,7 @@
         <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
         <a href="#services">Experience</a>
+        <a href="#skills">Skills</a>
         <a href="#portfolio">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -40,7 +64,7 @@
         <h3>And I'm a <span class="multiple-text"></span></h3>
         <p>
           I love all things tech! I am currently looking for an full time job in
-          the area of SWE, AI and/or DS
+          the area of SWE, AI and/or DS. I would love to get in touch!
         </p>
         <div class="social-media">
           <a href="https://github.com/nishanthchaganty"><i class="bx bxl-github"></i></a>
@@ -106,18 +130,22 @@
           <!-- <i class="bx bx-code-alt"></i> -->
           <img src=".\jobs\Tesla\tesla logo.jfif" />
           <h3>Tesla</h3>
-          <h2>Software Engineering Internship</h2>
-          <h4>January 2022 - August 2022</h4>
           <p>
-            Backend Engineer Intern - IT Applications Engineering Team
-                Tesla Energy Group
+            Software Engineer Intern - Backend 
           </p>
-          <p>
+          
             <span id="dotsTesla"></span>
-            <span id="more-tesla">
-            • Implemented sophisticated backend APIs in C# and built new robust scalable applications for business use.<br>
-            • Accelerated API performance by working on Technical Wealth Projects utilizing SQL, GraphQL, and REST APIs.<br>
-            • Maintained Databases through complex SQL queries.<br></p>
+            <span id="more-tesla" class="responsibilities">
+              <p class="teamDuration">
+              Duration: Januray 2022 - August 2022 <br>
+              IT Applications Engineering Team<br>
+              Tesla Energy<br>
+              </p>
+            <ul>
+            <li>Implemented sophisticated backend APIs in C# and built new robust scalable applications for business use. </li>
+            <li>Accelerated API performance by working on Technical Wealth Projects utilizing SQL, GraphQL, and REST APIs. </li>
+            <li>Maintained Databases through complex SQL queries. </li>
+            </ul>
         </span>
             </span
             >
@@ -131,40 +159,104 @@
           <!-- <i class="bx bxs-paint"></i>-->
           <img src=".\jobs\HubSpot\hubspot.png" />
           <h3>HubSpot</h3>
-          <h4>Software Engineering Intern</h4>
-          <h4>January 2023 - April 2023</h4>
-          <p>
-            Backend Engineer Intern - AI Products 
-                Artificial Intelligence Group
-          </p>
-          <p>
+          <p>Software Engineering Intern - Backend</p>
+          
           <span id="dotsHubspot"></span>
-            <span id="more-hubspot">
-            • Implemented sophisticated backend APIs in C# and built new robust scalable applications for business use.<br>
-            • Accelerated API performance by working on Technical Wealth Projects utilizing SQL, GraphQL, and REST APIs.<br>
-            • Maintained Databases through complex SQL queries.<br></p>
+            <span id="more-hubspot" class="responsibilities">
+              <p class="teamDuration">
+              Duration: January 2023 - April 2023
+              Backend Engineer Intern - AI Products 
+              </p>
+                <ul>
+            <li>Implemented sophisticated backend APIs in C# and built new robust scalable applications for business use. </li>
+            <li>Accelerated API performance by working on Technical Wealth Projects utilizing SQL, GraphQL, and REST APIs. </li>
+            <li>Maintained Databases through complex SQL queries.</li>
+            </ul>
         </span>
             </span
             >
-    </p>
+  
           <button onclick="readMoreHubspot()" class="btn" id="btnHubspot">Responsibilities</button>
         </div>
 
         <div class="services-box">
 
-          <img src=".\jobs\RIT\RIT logo.png" />
-          <h3>RIT Research Intern</h3>
-          <p>
-            Researched under Professor Victor Perrotti to find relationships between start up technologies and their funding using Machine Learning Algorithms.
-          </p>
-          <button onclick="readMore()" class="btn" id="myBtn">Read More</button>
+          <img style="height:168px; width:300px" src=".\jobs\RIT\RIT_logo2.png" />
+          <h3>RIT Research</h3>
+          <p>Research Intern</p>
+          
+            <span id="dotsRit"></span>
+              <span id="more-rit" class="responsibilities">
+                <p class="teamDuration" >
+                Duration: January 2023 - April 2023
+                Research Intern
+                </p> 
+                  
+              <ul><li>Researched under Professor Victor Perrotti to find relationships between start up technologies and their funding using Machine Learning Algorithms.</li></ul>
+          </span>
+              </span
+              >
+      
+          <button onclick="readMoreRit()" class="btn" id="btnRit">Responsibilities</button>
         </div>
       </div>
     </section>
 
-    <!-- <section class="education" id="education">
-      <h2 class="heading">My <span>J</span>/h2>
-    </section> -->
+    <section class="skills" id="skills">
+      <h2 class="heading">My <span>Skills</span></h2>
+      <div class="skills-row">
+        <div class="skills-column">
+        <h3 class="title">Languages</h3>
+
+        <div class="skills-box">
+          <div class="skills-content">
+            <div class="progress">
+              <h3>Python  </h3>
+              <div class="bar"><span></span></div>
+            </div>
+            <div class="progress">
+              <h3>Java  </h3>
+              <div class="bar"><span></span></div>
+            </div>
+            <div class="progress">
+              <h3>C#  </h3>
+              <div class="bar"><span></span></div>
+            </div>
+            <div class="progress">
+              <h3>JavaScript  </h3>
+              <div class="bar"><span></span></div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="skills-column">
+          <h3 class="title">Languages</h3>
+  
+          <div class="skills-box">
+            <div class="skills-content">
+              <div class="progress">
+                <h3>Tensorflow  </h3>
+                <div class="bar"><span></span></div>
+              </div>
+              <div class="progress">
+                <h3>Test</h3>
+                <div class="bar"><span></span></div>
+              </div>
+              <div class="progress">
+                <h3>SQL  </h3>
+                <div class="bar"><span></span></div>
+              </div>
+              <div class="progress">
+                <h3>Web Design (HTML, CSS, ReactJS)  </h3>
+                <div class="bar"><span></span></div>
+              </div>
+            </div>
+            </div>
+          </div>
+      </div>
+
+    </section>
 
     <!-- portfolio section design -->
     <section class="portfolio" id="portfolio">
@@ -207,7 +299,11 @@
             <p>
               Built a Google Assistant during RIT's largest hackathon meet for delivering b
             </p>
-            <a href="#"><i class="bx bx-link-external"></i></a>
+            <div class="project-icons">
+            <a href=""><i class="bx bx-link-external"></i></a>
+            <a href="https://github.com/ashishgalagali/rit-rider-google-assistant" target="_blank"><i class="bx bxl-github"></i></a>
+            </div>
+          
           </div>
         </div>
 
@@ -253,25 +349,32 @@
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me!</span></h2>
 
-      <form action="#">
+      <form id="myForm">
         <div class="input-box">
-          <input type="text" placeholder="Full Name" />
-          <input type="email" placeholder="Email Address" />
+          <input name="full_name" type="text" placeholder="Full Name" />
+          <input name="email" type="email" placeholder="Email Address" />
         </div>
         <div class="input-box">
-          <input type="number" placeholder="Mobile Number" />
-          <input type="text" placeholder="Email Subject" />
+          <input name="mobile" type="number" placeholder="Mobile Number" />
+          <input name="subject" type="text" placeholder="Email Subject" />
         </div>
         <textarea
-          name=""
+          name="message"
           id=""
           cols="30"
           rows="5"
           placeholder="Your Message"
           style="overflow: hidden"
         ></textarea>
-        <input type="submit" value="Send Message" class="btn" />
       </form>
+      <div style="display: flex;
+      align-items: center;
+      justify-content: center;" >
+      <button  onClick="SubForm()" class="btn">Submit</button>
+      </div>
+ 
+      <!-- <button class="btn" onclick='SubForm()' type="submit" value="Send Message">Send Message</button> -->
+
     </section>
 
     <!-- footer design -->
