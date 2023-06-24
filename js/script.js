@@ -109,3 +109,19 @@ function readMoreHubspot() {
     moreText.style.display = "inline";
   }
 }
+
+function readMoreRit() {
+  var dots = document.getElementById("dotsRit");
+  var moreText = document.getElementById("more-rit");
+  var btnText = document.getElementById("btnRit");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Responsibilites";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
