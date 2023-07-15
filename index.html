@@ -8,7 +8,7 @@
 
 
 
-    <script
+    <!-- <script
 		src="https://code.jquery.com/jquery-3.4.1.js"
 		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 		crossorigin="anonymous"></script>
@@ -26,7 +26,7 @@
 				}
 			});
   }
-	</script>
+	</script> -->
 
 
     <!-- box icons -->
@@ -286,7 +286,6 @@
               Uber clone app replicated using React native, Tailwind CSS and JavaScript.
             </p>
             <div class="project-icons">
-                <a href="#"><i class="bx bx-link-external"></i></a>
                 <a href="https://github.com/nishanthchaganty/netflix-clone" target="_blank"><i class="bx bxl-github"></i></a>
                 </div>
           </div>
@@ -332,7 +331,7 @@
         <div class="portfolio-box">
           <img src="images/portfolio6.jpg" alt="" />
           <div class="portfolio-layer">
-            <h4>DALL-E Image Generation Project</h4>
+            <h1>DALL-E Web App</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
               ratione.
@@ -347,30 +346,26 @@
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me!</span></h2>
 
-      <form id="myForm">
+      <form name="submit-to-google-sheet" id="myForm">
         <div class="input-box">
-          <input name="full_name" type="text" placeholder="Full Name" />
-          <input name="email" type="email" placeholder="Email Address" />
+          <input name="Name" type="text" placeholder="Full Name" />
+          <input name="Email" type="email" placeholder="Email Address" />
         </div>
         <div class="input-box">
-          <input name="mobile" type="number" placeholder="Mobile Number" />
-          <input name="subject" type="text" placeholder="Email Subject" />
+          <input name="Mobile" type="number" placeholder="Mobile Number (Optional)">
+          <input name="Subject" type="text" placeholder="Email Subject (Optional)" />
         </div>
         <textarea
-          name="message"
+          name="Message"
           id=""
           cols="30"
           rows="5"
           placeholder="Your Message"
           style="overflow: hidden"
         ></textarea>
+        <button type="submit" class="btn">Submit</button>
       </form>
-      <div style="display: flex;
-      align-items: center;
-      justify-content: center;" >
-      <button  onClick="SubForm()" class="btn">Submit</button>
-      </div>
- 
+      <span id='msg'></span>
       <!-- <button class="btn" onclick='SubForm()' type="submit" value="Send Message">Send Message</button> -->
 
     </section>
@@ -392,5 +387,42 @@
 
     <!-- custom js -->
     <script src="js/script.js"></script>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxvLO0OKiSSBsB_YG0lqVB6j8g_GdNSK6FjLIgsGUqTqs8qw3MrK1iCSAG2Om8ntog2Nw/exec'
+      const form = document.forms['submit-to-google-sheet']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {msg.innerHTML = 'Message sent successfully!'
+      setTimeout(function() {msg.innerHTML = ''}, 5000)
+      form.reset()
+    })
+  })
+          .catch(error => {msg.innerHTML = 'Form Submission Unsuccessful! Please try again.'
+        setTimeout(function() {msg.innerHTML = ''}, 5000)
+      form.reset()
+    })
+    </script>
+
+    // <script>
+    //   const scriptURL = 'https://script.google.com/macros/s/AKfycbzzBjHTZDOcdZiqhD_sF35mwodzfh0qUZv7rBNNi3cOZZxS0Fui3jY7MxgtUPEbQl_gFw/exec'
+    //   const form = document.forms['submit-to-google-sheet']
+    //   const msg = document.getElementById('msg')
+
+    //   form.addEventListener('submit', e => {
+    //     e.preventDefault()
+    //     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    //     .then(response => {msg.innerHTML = 'Message sent successfully!'
+    //   setTimeout(function() {msg.innerHTML = ''}, 5000)
+    //   form.reset()
+    // })
+    //     .catch(error => {msg.innerHTML = 'Form Submission Unsuccessful! Please try again.'
+    //     setTimeout(function() {msg.innerHTML = ''}, 5000)
+    //   form.reset()
+    // })
+    //   })
+    // </script>
   </body>
 </html>
