@@ -414,6 +414,14 @@ span {
   color: var(--second-bg-color);
 }
 
+.smart-weather-text {
+  font-size: 1rem;
+}
+
+.smart-weather-title {
+  font-size: 2rem;
+}
+
 .contact {
   min-height: auto;
   padding-bottom: 7rem;
