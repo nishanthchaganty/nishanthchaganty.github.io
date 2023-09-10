@@ -7,28 +7,6 @@
     <title>Portfolio | Nishanth Chaganty</title>
 
 
-
-    <!-- <script
-		src="https://code.jquery.com/jquery-3.4.1.js"
-		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-		crossorigin="anonymous"></script>
-	<script>
-		function SubForm (){
-			$.ajax({
-				url:"https://api.apispreadsheets.com/data/MMihyW5jtbIEfygU/",
-				type:"post",
-				data:$("#myForm").serializeArray(),
-				success: function(){
-					alert("Form Data Submitted :)")
-				},
-				error: function(){
-					alert("There was an error :(")
-				}
-			});
-  }
-	</script> -->
-
-
     <!-- box icons -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -63,7 +41,7 @@
         <h1>Nishanth Chaganty</h1>
         <h3>And I'm a <span class="multiple-text"></span></h3>
         <p>
-          I love all things tech! I am currently looking for an full time job in
+          I love all things tech! I am currently looking for a full time job in
           the area of SWE, AI and/or DS. I would love to get in touch!
         </p>
         <div class="social-media">
@@ -96,27 +74,29 @@
         <h2 class="heading">About <span>Me</span></h2>
         <h3>Backend Developer!</h3>
         <p>
-          Hello! I'm Nishanth Chaganty from Farmington, Connecticut. I am born
+          Hello! I'm Nishanth Chaganty from Hartford, Connecticut. I am born
           and raised in India and moved to the US in 2016. Since then, I have
           had the pleasure of working with a host of creative, supportive and
           diverse group of people all of who have inspired me to constantly
           adapt, improve and overcome.
         </p>
-        <p>
+
           <span id="dots"></span>
-          <span id="more"
+          <span id="more" class="responsibilities"
             >
-            Education:
-                School: Rochester Institute of Technology, GPA: 3.75
-                Major: Bachelors of Science in Computer Science Honors
-                Minor: Management Information Systems UniversityImmersion: French 
-                Extra-circulars: 
+            <p>
+            <h1>Education</h1><br>
+                <h4>School:</h4> Rochester Institute of Technology, GPA: 3.75<br>
+                <h4>Major:</h4> Bachelors of Science in Computer Science Honors
+                <h4>Minor: </h4> Management Information Systems University
+                <h4>Extra-circulars: </h4> 
                     Vice President of RIT Artificial Intelligence Club
                     Vice President of RIT Business & technology Professionals Club
-                    Vice President of RIT OASIS: Indian Subcontinent organiation
+                    Vice President of RIT OASIS: South Asian Student organiation
+                    </p>
             </span
           >
-        </p>
+          
         <button onclick="readMore()" class="btn" id="myBtn">Education & Skills</button>
       </div>
     </section>
@@ -149,7 +129,7 @@
         </span>
             </span
             >
-          </p>
+          <!-- </p> -->
           <button onclick="readMoreTesla()" class="btn" id="btnTesla">
             Responsibilities
           </button>
@@ -211,19 +191,19 @@
         <div class="skills-box">
           <div class="skills-content">
             <div class="progress">
-              <h3>Python  </h3>
+              <h3>Python (Pandas, Numpy, Scikit-Learn, Matplotlib) </h3>
               <div class="bar"><span></span></div>
             </div>
             <div class="progress">
-              <h3>Java  </h3>
+              <h3>Java (Hadoop, HBase, Kafka)</h3>
               <div class="bar"><span></span></div>
             </div>
             <div class="progress">
-              <h3>C#  </h3>
+              <h3>C#</h3>
               <div class="bar"><span></span></div>
             </div>
             <div class="progress">
-              <h3>JavaScript  </h3>
+              <h3>JavaScript </h3>
               <div class="bar"><span></span></div>
             </div>
           </div>
@@ -236,7 +216,7 @@
           <div class="skills-box">
             <div class="skills-content">
               <div class="progress">
-                <h3>Tensorflow  </h3>
+                <h3>Tensorflow</h3>
                 <div class="bar"><span></span></div>
               </div>
               <div class="progress">
@@ -244,11 +224,11 @@
                 <div class="bar"><span></span></div>
               </div>
               <div class="progress">
-                <h3>SQL  </h3>
+                <h3>SQL (MySQL, NoSQL)</h3>
                 <div class="bar"><span></span></div>
               </div>
               <div class="progress">
-                <h3>Web Design (HTML, CSS, ReactJS)  </h3>
+                <h3>Web Design (HTML, CSS, ReactJS, NextJS)  </h3>
                 <div class="bar"><span></span></div>
               </div>
             </div>
@@ -401,28 +381,11 @@
     })
   })
           .catch(error => {msg.innerHTML = 'Form Submission Unsuccessful! Please try again.'
+          document.getElementById('msg').style.color='red'
         setTimeout(function() {msg.innerHTML = ''}, 5000)
       form.reset()
     })
     </script>
 
-    // <script>
-    //   const scriptURL = 'https://script.google.com/macros/s/AKfycbzzBjHTZDOcdZiqhD_sF35mwodzfh0qUZv7rBNNi3cOZZxS0Fui3jY7MxgtUPEbQl_gFw/exec'
-    //   const form = document.forms['submit-to-google-sheet']
-    //   const msg = document.getElementById('msg')
-
-    //   form.addEventListener('submit', e => {
-    //     e.preventDefault()
-    //     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    //     .then(response => {msg.innerHTML = 'Message sent successfully!'
-    //   setTimeout(function() {msg.innerHTML = ''}, 5000)
-    //   form.reset()
-    // })
-    //     .catch(error => {msg.innerHTML = 'Form Submission Unsuccessful! Please try again.'
-    //     setTimeout(function() {msg.innerHTML = ''}, 5000)
-    //   form.reset()
-    // })
-    //   })
-    // </script>
   </body>
 </html>
