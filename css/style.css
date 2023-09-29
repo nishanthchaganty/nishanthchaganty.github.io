@@ -18,6 +18,19 @@
   --main-color: #0ef;
 }
 
+/* 
+
+  --bg-color: #172a45;
+  --second-bg-color: #303c55;
+  --text-color: #fff;
+  --main-color: #64ffda;
+original:
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #0ef;
+*/
+
 *::selection {
   background: var(--main-color);
   color: var(--bg-color);
@@ -505,6 +518,8 @@ span {
   color: #61b752;
   margin-top: -10px;
   display: block;
+  text-align: center;
+  font-size: 2rem;
 }
 
 /* BREAKPOINTS */
